@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "normaldistrib"
+description = "Generate symmetric and asymmetric normal distributions"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    {name = "Pablo A. Kler", email = "kler@cimec.unl.edu.ar"},
+    {name = "Gabriel S. Gerlero", email = "ggerlero@cimec.unl.edu.ar"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development",
+]
+
+dependencies = [
+    "numpy>=1.25.0,<3; python_version>='3.11'",
+    "numpy>=1,<3",
+    "scipy>=1,<2",
+]
+
+dynamic = ["version"]
+
+[project.optional-dependencies]
+lint = ["ruff"]
+dev = ["normaldistrib[lint]"]
+
+[project.urls]
+Homepage = "https://github.com/microfluidica/normaldistrib"
+Repository = "https://github.com/microfluidica/normaldistrib"
+
+[tool.setuptools]
+py-modules = ["normaldistrib"]
+
+[tool.setuptools.dynamic]
+version = {attr = "normaldistrib.__version__"}
+
+[tool.ruff.lint]
+extend-select = [
+    "ASYNC",
+    "B",
+    "C4",
+    "ERA",
+    "F",
+    "FLY",
+    "FURB",
+    "I",
+    "ICN",
+    "INT",
+    "NPY",
+    "PERF",
+    "PIE",
+    "PLC",
+    "PLE",
+    "PLW",
+    "PT",
+    "PTH",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "SIM",
+    "T20",
+    "TCH",
+    "UP",
+    "YTT",
+]

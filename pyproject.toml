@@ -43,9 +43,6 @@ Repository = "https://github.com/microfluidica/normaldistrib"
 lint = ["ruff"]
 dev = [{include-group = "lint"}]
 
-[tool.setuptools]
-py-modules = ["normaldistrib"]
-
 [tool.setuptools.dynamic]
 version = {attr = "normaldistrib.__version__"}
 

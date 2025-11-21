@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.special import erfc
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 def erfv(x, slope=20, scale=1, sep=5, center=0):

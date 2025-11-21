@@ -29,22 +29,20 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Software Development",
 ]
-
 dependencies = [
     "numpy>=1.25.0,<3; python_version>='3.11'",
     "numpy>=1,<3",
     "scipy>=1,<2",
 ]
-
 dynamic = ["version"]
-
-[project.optional-dependencies]
-lint = ["ruff"]
-dev = ["normaldistrib[lint]"]
 
 [project.urls]
 Homepage = "https://github.com/microfluidica/normaldistrib"
 Repository = "https://github.com/microfluidica/normaldistrib"
+
+[dependency-groups]
+lint = ["ruff"]
+dev = [{include-group = "lint"}]
 
 [tool.setuptools]
 py-modules = ["normaldistrib"]

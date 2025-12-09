@@ -19,4 +19,4 @@ pip install normaldistrib
 
 ## Usage
 
-See [`normaldistrib.py`](normaldistrib.py) for the available functions.
+See [`normaldistrib.py`](src/normaldistrib.py) for the available functions.

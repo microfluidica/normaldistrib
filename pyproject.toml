@@ -45,13 +45,3 @@ dev = [{include-group = "lint"}]
 
 [tool.setuptools.dynamic]
 version = {attr = "normaldistrib.__version__"}
-
-[tool.ruff.lint]
-extend-select = ["ALL"]
-extend-ignore = [
-    "ANN",
-    "COM812",
-    "D",
-    "ISC001",
-    "PLR0913",
-]
